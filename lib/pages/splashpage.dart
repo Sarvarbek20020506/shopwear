@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopwear/pages/logIn.dart';
 import 'package:shopwear/pages/signUp.dart';
 
 import 'home_page.dart';
@@ -19,7 +20,7 @@ class _SplashPageState extends State<SplashPage> {
   }
   _navigatiSlpash()async{
     await  Future.delayed(Duration(milliseconds: 2000),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>(const SignUp())));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>(const SignIn())));
     });
   }
 

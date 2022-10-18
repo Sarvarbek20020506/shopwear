@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tabler_icons/flutter_tabler_icons.dart';
+import 'package:shopwear/pages/logIn.dart';
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
   static const String id = "signup_page";
@@ -42,66 +43,75 @@ class _SignUpState extends State<SignUp> {
             SizedBox(height:25,),
 
             //Lastname Textfild
-            Text("  Lastname",style: TextStyle(color: Colors.white),),
+            Text("Lastname",style: TextStyle(color: Colors.blue,fontSize: 18,fontWeight: FontWeight.bold),),
+            SizedBox(height: 5,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
               height: 45,
               width: MediaQuery.of(context).size.width* 0.9,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.blue),
+                border: Border.all(color: Colors.blue,width: 3),
                 color: Colors.white,
               ),
                 child:const TextField(
                   decoration: InputDecoration(
                     icon: Icon(TablerIcons.pencil),
-                   //label: Text("Lastname",style: TextStyle(fontSize: 20),),
+                    hintText: "example:Frenkiev",
+                    hintStyle: TextStyle(fontSize: 22),
+                    border: InputBorder.none,
                   ),
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(fontSize: 20),
                 ),
               ),
             SizedBox(height: 15,),
 
 
             //Name Textfild
-            Text("  Name",style: TextStyle(color: Colors.white),),
+            Text("Name",style: TextStyle(color: Colors.blue,fontSize: 18,fontWeight: FontWeight.bold),),
+            SizedBox(height: 5,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
               height: 50,
               width: MediaQuery.of(context).size.width* 0.9,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.blue),
+                border: Border.all(color: Colors.blue,width: 3),
                 color: Colors.white,
               ),
               child:const TextField(
                 decoration: InputDecoration(
                   icon: Icon(TablerIcons.pencil),
-                  //label: Text("Lastname",style: TextStyle(fontSize: 20),),
+                  hintText: "example:Jorj",
+                  hintStyle: TextStyle(fontSize: 22),
+                  border: InputBorder.none,
                 ),
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 20),
               ),
             ),
             SizedBox(height: 15,),
 
 
-            //Mail Textfild
-            Text("  Mail",style: TextStyle(color: Colors.white),),
+            //mail textfild
+            Text("  Mail",style: TextStyle(color: Colors.blue,fontSize: 18,fontWeight: FontWeight.bold),),
+            SizedBox(height: 5,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
               height: 50,
               width: MediaQuery.of(context).size.width* 0.9,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.blue),
+                border: Border.all(color: Colors.blue,width: 3),
                 color: Colors.white,
               ),
               child:const TextField(
                 decoration: InputDecoration(
                   icon: Icon(TablerIcons.mail),
-                  //label: Text("Lastname",style: TextStyle(fontSize: 20),),
+                  hintText: "example@mail.com",
+                  hintStyle: TextStyle(fontSize: 22),
+                  border: InputBorder.none,
                 ),
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 20),
               ),
             ),
             SizedBox(height: 15,),
@@ -109,43 +119,50 @@ class _SignUpState extends State<SignUp> {
 
 
             //Password Textfild
-            Text("  Password",style: TextStyle(color: Colors.white),),
+            Text(" Password",style: TextStyle(color: Colors.blue,fontSize: 18,fontWeight: FontWeight.bold),),
+            SizedBox(height: 5,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
               height: 50,
               width: MediaQuery.of(context).size.width* 0.9,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.blue),
+                border: Border.all(color: Colors.blue,width: 3),
                 color: Colors.white,
               ),
               child:const TextField(
                 decoration: InputDecoration(
                   icon: Icon(TablerIcons.lock),
+                  hintText: "Password",
+                  hintStyle: TextStyle(fontSize: 22),
+                  border: InputBorder.none,
                 ),
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 20),
               ),
             ),
             SizedBox(height: 15,),
 
 
             //Comfirm Password
-            Text("  Confirm Password",style: TextStyle(color: Colors.white),),
+            Text("Comfirm Password",style: TextStyle(color: Colors.blue,fontSize: 18,fontWeight: FontWeight.bold),),
+            SizedBox(height: 5,),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10),
               height: 50,
               width: MediaQuery.of(context).size.width* 0.9,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.blue),
+                border: Border.all(color: Colors.blue,width: 3),
                 color: Colors.white,
               ),
               child:const TextField(
                 decoration: InputDecoration(
                   icon: Icon(TablerIcons.lock_access),
-                  //label: Text("Lastname",style: TextStyle(fontSize: 20),),
+                  hintText: "Confirm Password",
+                  hintStyle: TextStyle(fontSize: 22),
+                  border: InputBorder.none,
                 ),
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(fontSize: 20),
               ),
             ),
             SizedBox(height: 35,),
@@ -156,7 +173,9 @@ class _SignUpState extends State<SignUp> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 FlatButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.pushReplacementNamed(context, SignIn.id);
+                  },
                   child: Container(
                     height: 45,
                     width: MediaQuery.of(context).size.width/3,

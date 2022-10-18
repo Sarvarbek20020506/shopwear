@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopwear/pages/charPage.dart';
 import 'package:shopwear/pages/home_page.dart';
+import 'package:shopwear/pages/logIn.dart';
 import 'package:shopwear/pages/signUp.dart';
 import 'package:shopwear/pages/splashpage.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         HomePage.id : (context) =>HomePage(),
         ChatPage.id : (context) => ChatPage(),
         SignUp.id:(context) => SignUp(),
+        SignIn.id:(context) => SignIn(),
       },
     );
   }
