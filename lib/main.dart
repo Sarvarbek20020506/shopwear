@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopwear/pages/charPage.dart';
 import 'package:shopwear/pages/home_page.dart';
+import 'package:shopwear/pages/signUp.dart';
 import 'package:shopwear/pages/splashpage.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
       home: const SplashPage(),
@@ -19,6 +21,7 @@ class MyApp extends StatelessWidget {
         SplashPage.id : (context) => SplashPage(),
         HomePage.id : (context) =>HomePage(),
         ChatPage.id : (context) => ChatPage(),
+        SignUp.id:(context) => SignUp(),
       },
     );
   }

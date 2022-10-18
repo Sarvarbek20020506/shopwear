@@ -12,6 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String img = "https://source.unsplash.com/user/c_v_r/100x100";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -131,6 +132,22 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
+          Expanded(child: Container(
+            child: GridView.count(
+              crossAxisSpacing: 5,
+              mainAxisSpacing: 5,
+              crossAxisCount: 3,
+              children: < Widget>[
+                menuscrolItems(img,"shoes"),
+                menuscrolItems(img,"shoes"),
+                menuscrolItems(img,"shoes"),
+                menuscrolItems(img,"shoes"),
+                menuscrolItems(img,"shoes"),
+                menuscrolItems(img,"shoes"),
+                menuscrolItems(img,"shoes"),
+              ],
+            ),
+          ),)
         ],
       )
     );
@@ -174,6 +191,23 @@ class _HomePageState extends State<HomePage> {
   );
  }
 
- clearAllData(){
-
- }
+Widget menuscrolItems(String img2,String title){
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+      Container(
+        height: 100,
+        width: 90,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          image: DecorationImage(
+            image: NetworkImage(img2),
+            fit: BoxFit.cover
+          ),
+        ),
+      ),
+      Text(title),
+    ],
+  );
+}

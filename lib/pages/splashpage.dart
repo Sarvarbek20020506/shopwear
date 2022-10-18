@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopwear/pages/signUp.dart';
 
 import 'home_page.dart';
 class SplashPage extends StatefulWidget {
@@ -17,8 +18,8 @@ class _SplashPageState extends State<SplashPage> {
     _navigatiSlpash();
   }
   _navigatiSlpash()async{
-    await  Future.delayed(Duration(milliseconds: 4000),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>(HomePage())));
+    await  Future.delayed(Duration(milliseconds: 2000),(){
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>(const SignUp())));
     });
   }
 
@@ -48,7 +49,7 @@ class _SplashPageState extends State<SplashPage> {
               height: rad,
               width: rad,
               decoration: BoxDecoration(
-                //borderRadius: BorderRadius.circular(rad/2),
+                borderRadius: BorderRadius.circular(rad/2),
                   image:  const DecorationImage(
                       image: NetworkImage("https://source.unsplash.com/user/c_v_r/100x100"),
                     fit: BoxFit.cover,
